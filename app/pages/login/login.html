@@ -1,0 +1,9 @@
+<GridLayout id="page-login" columns="*" rows="*">
+    <StackLayout verticalAlignment="center">
+        <Image src="~/assets/img/footprints.png" stretch="none" horizontalAlignment="center"></Image>
+        <TextField #email hint="Email Address" keyboardType="email" [(ngModel)]="user.email" autocorrect="false" autocapitalizationType="none"></TextField>
+        <TextField #password hint="Password" secure="true" [(ngModel)]="user.password"></TextField>
+        <Button cssClass="btn-main" id="login-button" [text]="'Sign in'" (tap)="submit()"></Button>
+        <Button cssClass="btn-inverse" id="register-button" [text]="'Register'" (tap)="goToRegisterPage()"></Button>
+    </StackLayout>
+</GridLayout>
